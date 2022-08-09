@@ -1,10 +1,13 @@
 let mapleader = ","
+set number
+set relativenumber
 " save file content before running any :* command
 set autowrite
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
 set nowb
 set noswapfile
+
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -36,44 +39,3 @@ let g:go_addtags_transform = "camelcase"
 
 " let g:go_metalinter_autosave = 1
 
-syntax off
-set background=dark
-" colorscheme alabaster
-
-" https://github.com/preservim/tagbar
-let g:tagbar_type_go = {
-	\ 'ctagstype' : 'go',
-	\ 'kinds'     : [
-		\ 'p:package',
-		\ 'i:imports:1',
-		\ 'c:constants',
-		\ 'v:variables',
-		\ 't:types',
-		\ 'n:interfaces',
-		\ 'w:fields',
-		\ 'e:embedded',
-		\ 'm:methods',
-		\ 'r:constructor',
-		\ 'f:functions'
-	\ ],
-	\ 'sro' : '.',
-	\ 'kind2scope' : {
-		\ 't' : 'ctype',
-		\ 'n' : 'ntype'
-	\ },
-	\ 'scope2kind' : {
-		\ 'ctype' : 't',
-		\ 'ntype' : 'n'
-	\ },
-	\ 'ctagsbin'  : 'gotags',
-	\ 'ctagsargs' : '-sort -silent'
-\ }
-nmap <leader>t :TagbarToggle<CR>
-
-
-" vim fzf https://github.com/junegunn/fzf/blob/master/README-VIM.md
-" If installed using Homebrew
-set rtp+=/usr/local/opt/fzf
-nmap <leader>p :FZF<CR>
-
-set number
