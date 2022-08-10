@@ -77,3 +77,11 @@ set rtp+=/usr/local/opt/fzf
 nmap <leader>p :FZF<CR>
 
 set number
+
+" =====================
+"   TMUX INTEGRATION
+"   https://github.com/alexghergh/nvim-tmux-navigation
+" =====================
+
+nnoremap <silent> <C-\> :lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>
+nnoremap <silent> <C-Space> :lua require'nvim-tmux-navigation'.NvimTmuxNavigateNext()<cr>
