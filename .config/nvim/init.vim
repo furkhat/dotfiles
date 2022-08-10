@@ -37,7 +37,7 @@ let g:go_addtags_transform = "camelcase"
 " let g:go_metalinter_autosave = 1
 
 syntax off
-set background=dark
+set background=light
 " colorscheme alabaster
 
 " https://github.com/preservim/tagbar
