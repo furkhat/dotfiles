@@ -79,8 +79,7 @@ function parse_git_dirty() {
 #  AUTOCOMPLETION
 # ================
 eval "$(brew shellenv)"
-
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+ 
 export FPATH="$FPATH:$HOME/.zsh-completions.d"
 
 autoload -Uz compinit
@@ -93,6 +92,7 @@ zmodload -i zsh/complist
 
 WORDCHARS=''
 
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 unsetopt menu_complete   # do not autoselect the first completion entry
 unsetopt flowcontrol
