@@ -1,9 +1,13 @@
-" ===========================
-"  Golang LSP configuration 
-"  https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
-" ===========================
+" ===========================================
+"  Neovim LSP configuration 
+"  https://github.com/neovim/nvim-lspconfig
+" ===========================================
 
-lua require'lspconfig'.gopls.setup{}
+" for now vim-go for Go files
+
+"  Lua LSP configuration 
+
+lua require'lspconfig'.sumneko_lua.setup{}
 
 " ----------------------------------------------------------------
 
