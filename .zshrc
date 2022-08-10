@@ -76,6 +76,12 @@ function parse_git_dirty() {
 }
 
 # ================
+#  LOCAL SPECIFIC
+# ================
+
+source $HOME/.zshrc_local
+
+# ================
 #  AUTOCOMPLETION
 # ================
 eval "$(brew shellenv)"
@@ -140,5 +146,3 @@ typeset -U path PATH cdpath CDPATH fpath FPATH manpath MANPATH
 # ========
 export HISTSIZE=10000000
 export SAVEHIST=10000000
-
-source $HOME/.zshrc_local
