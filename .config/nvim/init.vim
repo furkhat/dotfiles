@@ -3,7 +3,8 @@
 "  https://github.com/neovim/nvim-lspconfig
 " ===========================================
 
-" for now vim-go for Go files
+" it seems ok to run alongside of vim-go
+lua require'lspconfig'.gopls.setup{}
 
 "  Lua LSP configuration 
 
