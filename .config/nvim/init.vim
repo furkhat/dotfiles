@@ -63,6 +63,16 @@ set nobackup
 set nowb
 set noswapfile
 
-syntax off
 set number
+
+" ===========================
+"  Colors
+" ===========================
 set background=light
+set hlsearch
+highlight Search ctermbg=Gray
+highlight LineNr ctermfg=Gray
+syntax off
+
+" ----------------------------------------------------------------
+
