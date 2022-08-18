@@ -1,4 +1,4 @@
-(require 'package)			
+(require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
@@ -18,13 +18,19 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(whiteboard))
- '(package-selected-packages '(flycheck go-mode use-package which-key company lsp-mode)))
+ '(package-selected-packages
+   '(flycheck go-mode use-package which-key company lsp-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(add-to-list 'load-path "~/.emacs-extensions/")
+(load "keywiz.el")
+
+(require 'use-package)
 
 (use-package which-key
   :ensure t
@@ -49,5 +55,6 @@
           (nilness        . t)
           (unusedwrite    . t)
           (unusedparams   . t)))
+  (add-to-list 'exec-path "~/go/bin")
   ;; requires goimports to be installed
   (setq gofmt-command "goimports"))
