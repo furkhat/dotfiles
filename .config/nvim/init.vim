@@ -11,7 +11,7 @@ lua require'lspconfig'.gopls.setup{}
 lua require'lspconfig'.sumneko_lua.setup{}
 
 " C language
-require'lspconfig'.clangd.setup{}
+lua require'lspconfig'.clangd.setup{}
 
 " ----------------------------------------------------------------
 
