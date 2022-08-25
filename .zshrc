@@ -146,4 +146,8 @@ typeset -U path PATH cdpath CDPATH fpath FPATH manpath MANPATH
 # ========
 export HISTSIZE=10000000
 export SAVEHIST=10000000
-export PATH="$PATH:$HOME/.nix-profile/bin/"
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
