@@ -146,3 +146,4 @@ typeset -U path PATH cdpath CDPATH fpath FPATH manpath MANPATH
 # ========
 export HISTSIZE=10000000
 export SAVEHIST=10000000
+export PATH="$PATH:$HOME/.nix-profile/bin/"
